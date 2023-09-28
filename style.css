@@ -1,0 +1,81 @@
+/*/* General Styling*/
+ body {
+    font-family: Calibri;
+    transition: 0.2s ease;
+    text-align: center;
+  }
+
+  body.success  {
+    background-color: #b7f0b7;
+    transition: 0.2s ease;
+  }
+
+  /* center everything in game container */
+  .game-container {
+    margin: 0px auto;
+  }
+
+  /* Map screen*/
+  .game-map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }  
+  
+  /*Map on left, controls on right*/
+  #map-and-controls {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #success-msg {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    padding: 5px 5px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: calc(100% - 8px);
+  }
+   body.success #success-msg {
+    opacity: 1;
+    transition: opacity 0.2 ease;
+  }
+  
+  
+  /*Layers and tiles are positioned absolutely*/
+  div.layer,
+  div.layer div {
+    position: absolute;
+  }
+
+  /* border for floors and wall */
+  #tiles div {
+    border: 1px solid grey;
+  }
+  
+  /*Default wall and floor styles*/
+  .default .floor {
+    background-color: lightgrey;
+  }
+  .default .wall {
+    background-color: skyblue;
+  }
+  
+  /*player and goal are slightly smaller than tiles*/
+  .player, 
+  .goal {
+    transform-origin: center;
+    transform:scale(0.85);
+  }
+
+  /*Goal colors*/
+  .goal {
+    background-color: #FFD700;
+    border: 1px solid #98720b;
+  }
+
+  /*Player default colors*/
+  .player {
+    transition: left 0.2s ease, top 0.2s ease;
+  }
